@@ -1,0 +1,95 @@
+{
+  "name": "moving-utils",
+  "version": "0.1.0",
+  "description": "TypeScript utils library",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./maths": {
+      "import": "./dist/esm/utils/maths.js",
+      "require": "./dist/cjs/utils/maths.js",
+      "types": "./dist/esm/utils/maths.d.ts"
+    },
+    "./random": {
+      "import": "./dist/esm/utils/random.js",
+      "require": "./dist/cjs/utils/random.js",
+      "types": "./dist/esm/utils/random.d.ts"
+    },
+    "./colors": {
+      "import": "./dist/esm/utils/colors.js",
+      "require": "./dist/cjs/utils/colors.js",
+      "types": "./dist/esm/utils/colors.d.ts"
+    },
+    "./arrays": {
+      "import": "./dist/esm/utils/arrays.js",
+      "require": "./dist/cjs/utils/arrays.js",
+      "types": "./dist/esm/utils/arrays.d.ts"
+    },
+    "./text": {
+      "import": "./dist/esm/utils/text.js",
+      "require": "./dist/cjs/utils/text.js",
+      "types": "./dist/esm/utils/text.d.ts"
+    },
+    "./geom": {
+      "import": "./dist/esm/utils/geom.js",
+      "require": "./dist/cjs/utils/geom.js",
+      "types": "./dist/esm/utils/geom.d.ts"
+    },
+    "./Range": {
+      "import": "./dist/esm/classes/Range.js",
+      "require": "./dist/cjs/classes/Range.js",
+      "types": "./dist/esm/classes/Range.d.ts"
+    },
+    "./Vec": {
+      "import": "./dist/esm/classes/Vec.js",
+      "require": "./dist/cjs/classes/Vec.js",
+      "types": "./dist/esm/classes/Vec.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "prepublishOnly": "npm run build",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/movingobjects/moving-utils.git"
+  },
+  "keywords": [
+    "utils",
+    "utilities",
+    "typescript",
+    "math",
+    "geometry",
+    "color"
+  ],
+  "author": "Scott Thiessen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/movingobjects/moving-utils/issues"
+  },
+  "homepage": "https://github.com/movingobjects/moving-utils#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.53.1"
+  }
+}
