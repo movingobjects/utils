@@ -13,7 +13,7 @@ npm install moving-utils
 ### Importing Utilities
 
 ```typescript
-import { maths, arrays, colors, geom, random, text, net } from 'moving-utils';
+import { maths, arrays, colors } from 'moving-utils';
 
 // Use math utilities
 const interpolated = maths.lerp(0, 100, 0.5); // 50
@@ -74,20 +74,3 @@ Text manipulation functions like case conversion, truncation, and lorem ipsum ge
 ### `Range`
 
 Numeric range class with interpolation, mapping, clamping, and wrapping functions.
-
-## Building
-
-```bash
-# Install dependencies
-npm install
-
-# Build the project
-npm run build
-
-# Type check without building
-npm run type-check
-```
-
-## License
-
-ISC
