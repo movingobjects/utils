@@ -1,4 +1,4 @@
-# moving-utils
+# @movingobjects/utils
 
 A TypeScript utility library providing mathematical functions, geometry utilities, color manipulation, and more.
 
