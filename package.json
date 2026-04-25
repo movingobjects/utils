@@ -1,5 +1,5 @@
 {
-  "name": "moving-utils",
+  "name": "@movingobjects/utils",
   "version": "0.1.0",
   "description": "TypeScript utils library",
   "main": "./dist/cjs/index.js",
@@ -66,9 +66,12 @@
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/movingobjects/moving-utils.git"
+    "url": "git+https://github.com/movingobjects/utils.git"
   },
   "keywords": [
     "utils",
@@ -81,9 +84,9 @@
   "author": "Scott Thiessen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/movingobjects/moving-utils/issues"
+    "url": "https://github.com/movingobjects/utils/issues"
   },
-  "homepage": "https://github.com/movingobjects/moving-utils#readme",
+  "homepage": "https://github.com/movingobjects/utils#readme",
   "engines": {
     "node": ">=18.0.0"
   },
