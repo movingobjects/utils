@@ -58,11 +58,11 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "build:esm": "tsc -p tsconfig.esm.json",
-    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "npx tsc -p tsconfig.esm.json",
+    "build:cjs": "npx tsc -p tsconfig.cjs.json",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
     "prepublishOnly": "npm run build",
-    "type-check": "tsc --noEmit",
+    "typecheck": "npx tsc --noEmit",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix"
   },
