@@ -87,6 +87,16 @@ export function color(): number {
 }
 
 /**
+ * Generate a random alphanumeric string
+ * @returns Random base-36 string (up to 11 characters)
+ * @example
+ * string()  // e.g., 'k7z2m9x1p4q'
+ */
+export function string(): string {
+  return Math.random().toString(36).slice(2);
+}
+
+/**
  * Add random variation to a number
  * @param n - Base number
  * @param freedom - Maximum variation in either direction
