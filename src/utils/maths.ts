@@ -5,7 +5,7 @@
 /**
  * Tau constant (2π)
  */
-export const TAO = Math.PI * 2;
+export const TAU = Math.PI * 2;
 
 /**
  * Golden ratio (φ)

@@ -110,7 +110,7 @@ export default class Vec implements Point {
   static fromAngle(angle: number, inDegrees: boolean = false): Vec {
     let a = angle;
     if (inDegrees) {
-      a = angle * (maths.TAO / 360);
+      a = angle * (maths.TAU / 360);
     }
     return new Vec(Math.cos(a), Math.sin(a));
   }

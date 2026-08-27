@@ -78,7 +78,7 @@ export function ptAroundCircle(
   perc: number,
   origin: Point | null = null,
 ): Point {
-  const angle = (perc * maths.TAO) - (Math.PI / 2);
+  const angle = (perc * maths.TAU) - (Math.PI / 2);
   const x = (origin ? origin.x : 0) + (radius * Math.cos(angle));
   const y = (origin ? origin.y : 0) + (radius * Math.sin(angle));
   return { x, y };
@@ -163,7 +163,7 @@ export function lerpPt(p1: Point, p2: Point, val: number = 0.5): Point {
  * degToRad(90)   // 1.5708... (Math.PI / 2)
  */
 export function degToRad(degs: number): number {
-  return degs * (maths.TAO / 360);
+  return degs * (maths.TAU / 360);
 }
 
 /**
@@ -175,7 +175,7 @@ export function degToRad(degs: number): number {
  * radToDeg(Math.PI / 2)  // 90
  */
 export function radToDeg(rads: number): number {
-  return rads * (360 / maths.TAO);
+  return rads * (360 / maths.TAU);
 }
 
 /**
