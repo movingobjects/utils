@@ -4,8 +4,8 @@
  * Note: getWidth() requires a browser environment with canvas support
  */
 
-import * as random from './random';
 import * as arrays from './arrays';
+import * as random from './random';
 
 /**
  * Left double quotation mark character
@@ -135,6 +135,7 @@ export function getLatin(wordCount: number = 1, punctuate: boolean = false): str
   const CHANCE_PERIOD = 0.1;
   const CHANCE_COMMA = 0.15;
 
+  /* eslint-disable */
   let sourceWords = [
     'a', 'ac', 'accumsan', 'ad', 'adipiscing', 'aenean', 'aliquam', 'amet', 'ante',
     'aptent', 'arcu', 'at', 'auctor', 'augue', 'bibendum', 'blandit', 'class',
@@ -158,24 +159,25 @@ export function getLatin(wordCount: number = 1, punctuate: boolean = false): str
     'ultricies', 'urna', 'ut', 'varius', 'vehicula', 'vel', 'velit', 'venenatis',
     'vitae', 'vivamus', 'viverra', 'volutpat', 'vulputate',
   ];
+  /* eslint-enable */
 
   while (sourceWords.length < wordCount) {
     sourceWords = sourceWords.concat(sourceWords);
   }
 
   let isNewSentence = true;
-  const words = random.items(sourceWords, wordCount);
+  const allWords = random.items(sourceWords, wordCount);
   let result = '';
 
-  for (let i = 0; i < words.length; i++) {
-    const isLastWord = (i === arrays.lastIndex(words));
-    const nextWord = words[i];
+  for (let i = 0; i < allWords.length; i++) {
+    const isLastWord = (i === arrays.lastIndex(allWords));
+    const nextWord = allWords[i];
 
     if (isNewSentence) {
       result += nextWord.charAt(0).toUpperCase() + nextWord.slice(1);
       isNewSentence = false;
     } else {
-      result += words[i];
+      result += allWords[i];
     }
 
     if (punctuate) {
@@ -206,6 +208,7 @@ export function getLatin(wordCount: number = 1, punctuate: boolean = false): str
  * getFakeWord(8)  // e.g., 'drashift'
  */
 export function getFakeWord(len: number): string {
+  /* eslint-disable */
   const CONSONANTS_INIT = [
     'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't',
     'v', 'w', 'x', 'dr', 'gl', 'gr', 'ch', 'ph', 'ps', 'sh', 'st', 'th', 'wh',
@@ -221,6 +224,7 @@ export function getFakeWord(len: number): string {
   const VOWELS = [
     'a', 'e', 'i', 'o', 'u', 'y', 'ee', 'ea', 'oa', 'oo', 'ou',
   ];
+  /* eslint-enable */
 
   let word = '';
   let prevIsVowel = random.boolean();

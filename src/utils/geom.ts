@@ -3,7 +3,10 @@
  */
 
 import * as maths from './maths';
-import type { Point, Rect } from '../types/common';
+import type {
+  Point,
+  Rect,
+} from '../types/common';
 
 // Points
 
@@ -59,7 +62,10 @@ export function rotatePt(pt: Point, rads: number, origin?: Point): Point {
   const x = (aCos * dx) - (aSin * dy) + ox;
   const y = (aSin * dx) + (aCos * dy) + oy;
 
-  return { x, y };
+  return {
+    x,
+    y,
+  };
 }
 
 /**
@@ -81,7 +87,10 @@ export function ptAroundCircle(
   const angle = (perc * maths.TAU) - (Math.PI / 2);
   const x = (origin ? origin.x : 0) + (radius * Math.cos(angle));
   const y = (origin ? origin.y : 0) + (radius * Math.sin(angle));
-  return { x, y };
+  return {
+    x,
+    y,
+  };
 }
 
 /**
@@ -189,8 +198,14 @@ export function radToDeg(rads: number): number {
  */
 export function getRadFromPts(fromPt: Point, toPt?: Point): number {
   if (toPt === undefined) {
-    toPt = { x: fromPt.x, y: fromPt.y };
-    fromPt = { x: 0, y: 0 };
+    toPt = {
+      x: fromPt.x,
+      y: fromPt.y,
+    };
+    fromPt = {
+      x: 0,
+      y: 0,
+    };
   }
 
   return Math.atan2(toPt.y - fromPt.y, toPt.x - fromPt.x);

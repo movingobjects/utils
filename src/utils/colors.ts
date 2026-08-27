@@ -4,7 +4,10 @@
  */
 
 import * as maths from './maths';
-import type { RGB, HSV } from '../types/common';
+import type {
+  HSV,
+  RGB,
+} from '../types/common';
 
 /**
  * Convert color integer to hex string
@@ -44,7 +47,11 @@ export function toRgb(color: number): RGB {
  * toHsv(0xFF0000)  // {h: 0, s: 1, v: 1} (red)
  */
 export function toHsv(color: number): HSV {
-  const { r, g, b } = toRgb(color);
+  const {
+    r,
+    g,
+    b,
+  } = toRgb(color);
 
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
@@ -74,7 +81,11 @@ export function toHsv(color: number): HSV {
     h /= 6;
   }
 
-  return { h, s, v };
+  return {
+    h,
+    s,
+    v,
+  };
 }
 
 /**

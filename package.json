@@ -91,6 +91,7 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
+    "@movingobjects/eslint-config": "^0.3.0",
     "eslint": "^9.39.2",
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.53.1"

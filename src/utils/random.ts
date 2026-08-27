@@ -93,7 +93,11 @@ export function color(): number {
  * string()  // e.g., 'k7z2m9x1p4q'
  */
 export function string(): string {
-  return Math.random().toString(36).slice(2);
+  return (
+    Math.random()
+      .toString(36)
+      .slice(2)
+  );
 }
 
 /**

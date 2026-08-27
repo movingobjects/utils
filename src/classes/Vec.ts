@@ -2,10 +2,10 @@
  * 2D vector class for geometric calculations
  */
 
-import * as geom from '../utils/geom';
-import * as random from '../utils/random';
-import * as maths from '../utils/maths';
 import type { Point } from '../types/common';
+import * as geom from '../utils/geom';
+import * as maths from '../utils/maths';
+import * as random from '../utils/random';
 
 /**
  * 2D vector class with common vector operations
@@ -349,7 +349,12 @@ export default class Vec implements Point {
    * Wrap this vector within a rectangle (mutates)
    * @param rect - Rectangle bounds
    */
-  wrapInRect(rect: { x: number; y: number; w: number; h: number }): void {
+  wrapInRect(rect: {
+    x: number;
+    y: number;
+    w: number;
+    h: number
+  }): void {
     this.wrapIn(rect.x, rect.y, rect.w, rect.h);
   }
 
